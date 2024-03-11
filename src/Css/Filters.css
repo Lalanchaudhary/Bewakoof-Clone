@@ -1,0 +1,24 @@
+.tags
+{
+    padding-bottom: 15px;
+    margin: 5px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.692);
+    height: 40px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.tags2
+{
+    height: min-content;
+}
+.inner
+{
+    padding: 0px 20px;
+}
+.inner-para
+{
+    margin: 4px;
+    font-size: 15px;
+    color: rgba(100, 99, 99, 0.929);
+    cursor: pointer;
+}

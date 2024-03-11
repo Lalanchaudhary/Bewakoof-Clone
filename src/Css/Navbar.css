@@ -1,0 +1,29 @@
+.navbar1
+{
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+}
+
+.icons
+{
+    height: 25px;
+    border-left: 1px solid gray;
+    display: flex;
+    align-items: center;
+    margin-left:10px;
+    padding: 10px;
+}
+.icons2 
+{
+    color: black;
+}
+.navbar1
+{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.862);
+}
+.fs
+{
+    font-size: 18px;
+    
+}
