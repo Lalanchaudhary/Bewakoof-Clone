@@ -8,9 +8,9 @@ function MenOutput(props) {
      <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={props.data.image} />
       <Card.Body>
-      <Card.Text className='fs-6'>
+      <Card.Title className='fs-6'>
             {props.data.title}
-        </Card.Text>
+        </Card.Title>
         <Card.Text className='disc'>
             {props.data.disc}
         </Card.Text>
