@@ -7,11 +7,11 @@ function Filters(props) {
         <Accordion className='acod' defaultActiveKey="0" flush>
           {
             props.data.map((row)=>{
-              return  <Accordion.Item eventKey={row.No}>
-              <Accordion.Header>{row.title}</Accordion.Header>
+              return  <Accordion.Item eventKey={row.No} >
+              <Accordion.Header >{row.title}</Accordion.Header>
               {
                 row.category.map((e)=>{
-                  return     <Accordion.Body className='py-1' onClick={() => { props.action(e) }} >{e}</Accordion.Body>
+                  return     <Accordion.Body className='py-1' onClick={() => { props.action(row.title,e) }} >{e}</Accordion.Body>
                 })
               }
             </Accordion.Item>

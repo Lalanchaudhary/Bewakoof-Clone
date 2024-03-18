@@ -41,19 +41,7 @@ function Men() {
         "L",
         "XL",
         "2XL",
-        "3XL",
-        "28",
-        "30",
-        "32",
-        "34",
-        "36",
-        "38",
-        "40",
-        "42",
-        "44",
-        "46",
-        "48",
-        "50"]
+        "3XL",]
     },
     {
       No: 2,
@@ -183,7 +171,8 @@ function Men() {
         disc: "Men's Black Straw Hat Crew Graphic Printed Oversized T-shirt",
         price: "₹799",
         type: "100% Cotton",
-        color: "black"
+        color: "black",
+        size: "S",
       },
       {
         image: "https://images.bewakoof.com/t640/men-s-black-one-piece-graphic-printed-oversized-t-shirt-630630-1709105339-1.jpg",
@@ -191,7 +180,8 @@ function Men() {
         disc: "Men's Black Straw Hat Crew Graphic Printed Oversized T-shirt",
         price: "₹799",
         type: "100% Cotton",
-        color: "black"
+        color: "black",
+        size: "S",
       },
       {
         image: "https://images.bewakoof.com/t640/men-s-black-foodie-deadpool-graphic-printed-oversized-acid-wash-t-shirt-633533-1708600144-1.jpg",
@@ -199,7 +189,8 @@ function Men() {
         disc: "Men's Black Straw Hat Crew Graphic Printed Oversized T-shirt",
         price: "₹799",
         type: "100% Cotton",
-        color: "black"
+        color: "black",
+        size: "M",
       },
       {
         image: "https://images.bewakoof.com/t640/men-s-brown-straw-hat-crew-graphic-printed-oversized-t-shirt-630812-1709105472-1.jpg",
@@ -207,7 +198,8 @@ function Men() {
         disc: "Men's Black Straw Hat Crew Graphic Printed Oversized T-shirt",
         price: "₹799",
         type: "100% Cotton",
-        color: "black"
+        color: "black",
+        size: "M",
       },
       {
         image: "https://images.bewakoof.com/t640/men-s-black-mugiwara-crew-graphic-printed-oversized-t-shirt-630813-1709116981-1.jpg",
@@ -239,7 +231,8 @@ function Men() {
         disc: "Men's Black Straw Hat Crew Graphic Printed Oversized T-shirt",
         price: "₹799",
         type: "100% Cotton",
-        color: "blue"
+        color: "blue",
+        size: "S",
       },
       {
         image: "https://images.bewakoof.com/t640/men-s-blue-luffy-graphic-printed-oversized-t-shirt-630647-1709105295-1.jpg",
@@ -255,7 +248,8 @@ function Men() {
         disc: "Men's Black Straw Hat Crew Graphic Printed Oversized T-shirt",
         price: "₹799",
         type: "100% Cotton",
-        color: "blue"
+        color: "blue",
+        size: "S",
       },
       {
         image: "https://images.bewakoof.com/t640/men-s-navy-blue-relaxe-fit-cargo-pant-585697-1696326535-1.jpg",
@@ -279,7 +273,8 @@ function Men() {
         disc: "Men's Black Straw Hat Crew Graphic Printed Oversized T-shirt",
         price: "₹799",
         type: "100% Cotton",
-        color: "red"
+        color: "red",
+        size: "M",
       },
       {
         image: "https://images.bewakoof.com/t640/men-s-red-weapon-xi-graphic-printed-t-shirt-630777-1706686786-1.jpg",
@@ -288,6 +283,7 @@ function Men() {
         price: "₹799",
         type: "100% Cotton",
         color: "red"
+        
       },
       {
         image: "https://images.bewakoof.com/t640/men-s-red-life-is-a-trip-graphic-printed-oversized-t-shirt-629310-1704450149-1.jpg",
@@ -295,7 +291,8 @@ function Men() {
         disc: "Men's Black Straw Hat Crew Graphic Printed Oversized T-shirt",
         price: "₹799",
         type: "100% Cotton",
-        color: "red"
+        color: "red",
+        size: "M",
       },
       {
         image: "https://images.bewakoof.com/t640/men-s-red-spaced-nasa-typography-t-shirt-475126-1706005918-1.jpg",
@@ -303,7 +300,8 @@ function Men() {
         disc: "Men's Black Straw Hat Crew Graphic Printed Oversized T-shirt",
         price: "₹799",
         type: "100% Cotton",
-        color: "red"
+        color: "red",
+        size: "L",
       },
       {
         image: "https://images.bewakoof.com/t640/men-s-red-weapon-xi-graphic-printed-oversized-t-shirt-604873-1690372836-1.jpg",
@@ -311,7 +309,8 @@ function Men() {
         disc: "Men's Black Straw Hat Crew Graphic Printed Oversized T-shirt",
         price: "₹799",
         type: "100% Cotton",
-        color: "red"
+        color: "red",
+        size: "S",
       },
       {
         image: "https://images.bewakoof.com/t640/men-s-red-moon-rider-graphic-printed-oversized-t-shirt-502017-1701423884-1.jpg",
@@ -319,21 +318,39 @@ function Men() {
         disc: "Men's Black Straw Hat Crew Graphic Printed Oversized T-shirt",
         price: "₹799",
         type: "100% Cotton",
-        color: "red"
+        color: "red",
+        size: "S",
       },
 
     ]);
 
-
-
-
-  const Reduce = (event) => {
-    const items = products.filter((e) => {
-      if (e.color == event) {
-        return e;
-      }
-    })
-    setProducts(items);
+  const Reduce = (title,event) => {
+    console.log(title);
+    console.log(event);
+    var items;
+    switch (title){
+        case "Color":
+           items = products.filter((e) => {
+            if (e.color == event) {
+              return e;
+            }
+          })
+          setProducts(items);
+            break;
+        case "Sizes":
+          items = products.filter((e) => {
+            if (e.size == event) {
+              return e;
+            }
+          })
+          setProducts(items);
+            break;
+        case "sunflower":
+            console.log("Sunflowers are yellow");
+            break;
+        default:
+            console.log("Please select another flower");
+    }
   }
   if (products.length < 7) {
     document.querySelector(".filters").classList.add("filters2")
@@ -350,7 +367,7 @@ function Men() {
         <div className='Output-div'>
           {
             products.map((row) => {
-              return <MenOutput data={row} />
+              return <MenOutput data={row}  />
             })
           }
         </div>
